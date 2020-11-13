@@ -27,6 +27,18 @@ function add_featured_image_support_to_your_wordpress_theme() {
 /* Add Featured Image Support To Your WordPress Theme */
 	add_image_size( 'small-thumbnail', 200, 200, true );
 	add_image_size( 'single-post-image', 350, 350, true );
+	add_theme_support( 'post-formats', [
+		'aside',
+		'gallery',
+		'link',
+		'image',
+		'quote',
+		'status',
+		'video',
+		'audio',
+		'chat',
+		'standard'
+	] );
 }
  
 add_action( 'after_setup_theme', 'add_featured_image_support_to_your_wordpress_theme' );
