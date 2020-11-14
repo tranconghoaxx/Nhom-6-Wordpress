@@ -17,10 +17,12 @@ get_header(); ?>
 			?>
     </div><!-- main-column -->
     
-    <div class="sidebar-column">
-        <!-- sidebar-column -->
-        <p>Content in the sidebar</p>
-    </div><!-- sidebar-column -->
+    <?php if ( is_active_sidebar( 'rightsidebar' ) ) { ?>
+            <div class="sidebar-column"><!-- sidebar-column -->
+				<?php dynamic_sidebar( 'rightsidebar' ) ?>
+            </div><!-- sidebar-column -->
+		<?php } ?>
+        
 </div><!-- main-content -->
 <?php
  
