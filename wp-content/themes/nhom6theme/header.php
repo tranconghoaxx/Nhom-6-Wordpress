@@ -7,16 +7,25 @@
 <body <?php body_class(); ?>>
     <div class="container">
         <header class="site-header">
+            <div class="top-header">
+
 
             <div class="left">
-                <img src="<?php echo get_bloginfo('template_url') ?>/imgs/logo.png" />
+                <?php
+       if ( function_exists( 'the_custom_logo' ) ) {
+        the_custom_logo();
+       }
+            ?>
             </div>
+
             <div class="right">
                 <h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
                 <h4><?php bloginfo( 'description' ); ?></h4>
                 <div class="header-search">
                     <?php get_search_form(); ?>
                 </div>
+
+            </div>
             </div>
             <div class="clear"></div>
             <nav class="navigation-menu">
