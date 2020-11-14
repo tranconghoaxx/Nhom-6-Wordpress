@@ -251,3 +251,17 @@ p.post-meta a:visited {
   justify-content: space-between;
   align-items: center;
 }
+/* chia hai cot trong home page */
+.home-columns {
+  overflow: auto;
+}
+
+.home-left {
+  width: 45%;
+  float: left;
+}
+
+.home-right {
+  width: 45%;
+  float: right;
+}
